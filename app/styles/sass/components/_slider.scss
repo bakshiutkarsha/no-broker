@@ -1,0 +1,25 @@
+.range{
+  margin: 20px 0;
+}
+.noUi-target{
+  height: 1px;
+}
+.noUi-horizontal .noUi-handle{
+  width: 20px;
+  height: 20px;
+  border-radius: 26px;
+  top: -9px;
+  border: 2px solid #009587;
+  outline: none;
+}
+
+.noUi-base, .noUi-handle{
+  height: 1px;
+}
+.noUi-handle:after, .noUi-handle:before{
+  display: none;
+}
+.noUi-connect{
+  background: #009587;
+  top: -1px;
+}

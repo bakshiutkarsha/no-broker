@@ -1,0 +1,15 @@
+/*Import base styles*/
+@import "sass/base/colors.scss";
+@import "sass/base/variables.scss";
+@import "sass/base/mixins.scss";
+@import "sass/base/global.scss";
+
+/*Import Components*/
+
+@import "sass/components/_button.scss";
+@import "sass/components/_header.scss";
+@import "sass/components/_filter.scss";
+@import "sass/components/_dropdown.scss";
+@import "sass/components/_card.scss";
+@import "sass/components/_checkbox.scss";
+@import "sass/components/_slider.scss";

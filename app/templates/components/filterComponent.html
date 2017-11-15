@@ -1,0 +1,62 @@
+<div class="filter-card">
+   <div class="filter-card-header">
+     <p>
+       Filters
+     </p>
+     <p class="reset" id="reset">
+       Reset
+     </p>
+   </div>
+   <div class="filter-option">
+     <div class="filter-type">
+         <p class="filter-head">
+          Apartment Type
+         </p>
+         <div class="types-cntr">
+             <div class="type">
+                <span class="bhk-type" data-type="RK1">1RK</span>
+                <span class="bhk-type" data-type="BHK1">1 BHK</span>
+                <span class="bhk-type" data-type="BHK2">2 BHK</span>
+                <span class="bhk-type" data-type="BHK3">3 BHK</span>
+                <span class="bhk-type" data-type="BHK4">4 BHK</span>
+                <span class="bhk-type" data-type="BHK4PLUS">4+ BHK</span>
+             </div>
+          </div>
+     </div>
+
+     <div class="filter-type">
+       <p class="filter-head">
+        Rent Range (per month)
+       </p>
+      <div class="range-selector">
+         <div id="range" class="range"> </div>
+         <label> &#8377;
+            <input type="text" class="range-filter" id="lower-value" name="range-rent" value="0"/>
+         </label>
+         <label>
+            <div id="lower-value">
+
+            </div>
+            <input type="text" class="range-filter" id="upper-value" name="range-rent" value="4,75,000"/>
+         </label>
+
+      </div>
+
+     </div>
+
+     <div class="filter-type">
+       <p class="filter-head">
+        Furnishing
+       </p>
+       <input id="full" class="styled-checkbox" type="checkbox" name="furnish" value='FULLY_FURNISHED'/>
+       <label for="full">Full</label>
+
+       <input id="semi" class="styled-checkbox" type="checkbox" name="furnish" value="SEMI_FURNISHED"/>
+       <label for="semi">Semi</label>
+
+       <input id="no" class="styled-checkbox" type="checkbox" name="furnish" value="NOT_FURNISHED"/>
+       <label for="no">No</label>
+     </div>
+
+   </div>
+</div>

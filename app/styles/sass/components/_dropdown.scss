@@ -1,0 +1,18 @@
+.drop-down{
+  position: relative;
+  width: 270px;
+  .drop-down-cntr{
+    position: absolute;
+    right: 16px;
+    width: 130px;
+    background: #fff;
+    p{
+      padding: 5px;
+      border-bottom: 1px solid #eaeaea;
+    }
+  }
+}
+
+.suggestion-cntr{
+  padding: 20px;
+}

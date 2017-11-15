@@ -1,0 +1,34 @@
+@mixin placeholder{
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: pink;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: pink;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: pink;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: pink;
+  }
+}
+
+@mixin button($margin-left, $height, $padding-left-right, $border-radius){
+    display: inline-block;
+    background: #fd3753;
+    color: #fff;
+    padding: 6px $padding-left-right;
+    border-radius: $border-radius;
+    vertical-align: top;
+    cursor: pointer;
+    border-color: #fd3753;
+    margin-left: $margin-left;
+    height:$height;
+}
+
+%sub-heading{
+  font-weight: 100;
+  font-size: 13px;
+  line-height: 25px;
+  color: $broker-card-header;
+};

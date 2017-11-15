@@ -1,0 +1,13 @@
+{
+  "name": "supertags",
+  "private": true,
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "routie": "^0.3.2",
+    "underscore": "^1.8.3",
+    "jquery": "^3.2.1",
+    "moment": "^2.19.2",
+    "nouislider": "noUiSlider#^10.1.0"
+  },
+  "devDependencies": {}
+}

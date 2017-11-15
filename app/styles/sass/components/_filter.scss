@@ -1,0 +1,69 @@
+.filter-cntr{
+  // padding: 10px 60px;
+  display: inline-block;
+  padding: 120px 0 10px 60px;
+  position: fixed;
+  width: 23%;
+  .filter-card{
+    width: 100%;
+    background: #fff;
+    border-radius: 2px;
+    .filter-card-header{
+      border-bottom: 1px solid #e1e1e1;
+      p{
+        padding: 15px;
+        color: #909496;
+        display: inline-block;
+        &.reset{
+          color: #009587;
+          float: right;
+          cursor: pointer;
+        }
+      }
+    }
+    .filter-option{
+      padding: 0 15px;
+      .filter-type{
+        padding: 10px 0;
+        .filter-head{
+          color: #707070;
+          font-size: 14px;
+          padding-bottom: 5px;
+        }
+      }
+      .type{
+        line-height: 35px;
+        span{
+          cursor: pointer;
+          background: #f8f8f8;
+          font-size: 13px;
+          padding: 5px 10px;
+          margin-right: 10px;
+          color: #707070;
+          &.active{
+            color: #fff;
+            background: #009587;
+          }
+        }
+      }
+    }
+  }
+}
+
+.range-selector{
+  width: 80%;
+  margin: 0 auto;
+  label{
+    color: #707070;
+    width: 30%;
+    input{
+      padding: 3px;
+      width: 42px;
+      width: 56px;
+    }
+    &:last-child{
+      float: right;
+    }
+  }
+
+}

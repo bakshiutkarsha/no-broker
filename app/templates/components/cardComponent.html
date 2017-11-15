@@ -1,0 +1,95 @@
+<%if(data.length != 0){ %>
+  <% for(var i =0 ; i < data.length; i++){ %>
+      <div class="card-cntr">
+          <div class="card-header">
+            <p class="main-head">
+              <%- data[i].title %>
+            </p>
+            <p class="sub-head">
+              <%- data[i].street %>
+            </p>
+          </div>
+
+          <div class="rent-cntr">
+            <div class="rent-info">
+              <p>
+                <%- data[i].propertySize %> ft
+              </p>
+              <p>
+                Builtup
+              </p>
+            </div>
+            <div class="rent-info">
+              <p>
+                 <%- formatINR(data[i].deposit) %>
+              </p>
+              <p>
+                Deposit
+              </p>
+            </div>
+            <div class="rent-info">
+              <p>
+                <%- formatINR(data[i].rent) %>
+              </p>
+              <p>
+                Rent
+                <% if(data[i].negotiable == true){ %>
+                    <span>(Negotiable)</span>
+                <% } else { %>
+                    <span>(Non-Negotiable)</span>
+                <% } %>
+              </p>
+            </div>
+          </div>
+
+          <div class="flat-cntr">
+            <img src="../images/dummy.png" />
+              <% for(var j = 0; j < data[i].photos; j++){ %>
+                  <img src="<%-data[i].photos[j].imagesMap.displayPic%>" />
+              <% } %>
+
+            <div class="flat-cntr-info">
+              <div class="table-cntr">
+                <table>
+                  <tr>
+                    <td class="furnishing">
+                      <%- data[i].furnishingDesc %> Furnished
+                    </td>
+                    <td class="birthdate">
+                      <%- data[i].propertyAge %> year old
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tenant">
+                        <%if(data[i].tenantTypeDesc == ''){ %>
+                            All
+                        <% }else{ %>
+                            <%- data[i].tenantTypeDesc %>
+                        <% } %>
+                    </td>
+                    <td class="availability">
+                      <%- propertyAvailabilityTime(data[i].availableFrom) %>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+
+              <div class="action-cntr">
+                <div class="button">
+                  Get Owner Details
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+  <% } %>
+<% } else { %>
+    <div class="no-results card-cntr">
+        <span>No Results Found</span>
+    </div>
+<% } %>
+
+
+<div class="loader hide">
+  <img src="../../images/loading.gif" />
+</div>
