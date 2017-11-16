@@ -49,14 +49,38 @@
   .flat-cntr{
     padding: 10px;
     background: #fff;
-    img{
+    .img-cntr{
+      width: 37%;
       display: inline-block;
       vertical-align: top;
-      width: 37%;
+      position: relative;
       margin-right: 10px;
-      height: 177px;
-      border-radius: 2px;
+      img{
+        vertical-align: top;
+        height: 177px;
+        border-radius: 2px;
+        width: 100%;
+      }
+      .overlay-cntr{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        background: #000;
+        opacity: 0.3;
+        z-index: 5;
+        height: 25px;
+      }
+      .overlay{
+        position: absolute;
+        color: #fff;
+        z-index: 7;
+        bottom: 5px;
+        left: 10px;
+        font-size: 14px;
+      }
     }
+
     .flat-cntr-info{
       display: inline-block;
       width: 58%;

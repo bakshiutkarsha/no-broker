@@ -33,7 +33,7 @@ let applyRangeFilter = function(){
   upper = upper.replace(/,/g,'');
   let rangeArr =[];
   rangeArr.push(lower, upper);
-  
+
   let rangeStr = 'rent='+rangeArr.toString();
   Storage.set('RANGE_URL', rangeStr);
   checkForOtherFilters();
@@ -67,7 +67,9 @@ let _changeView = function(filterStr){
 }
 
 let resetFilter = function(){
+  let placeId = Storage.get('PLACE_ID')
   Storage.clear();
+  Storage.set('PLACE_ID',placeId)
   HouseView.renderFilter();
   _changeView();
 }

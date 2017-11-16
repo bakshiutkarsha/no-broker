@@ -21,8 +21,18 @@
 </head>
 
 <body>
+
     <div id="modalCntr" class="modalCntr"></div>
+
     <div class="container" id="globalCntr"></div>
+    <!-- <input id="pac-input" class="controls" type="text"
+        placeholder="Enter a location">
+        <div id="map"></div>
+        <div id="infowindow-content">
+        <span id="place-name"  class="title"></span><br>
+        Place ID <span id="place-id"></span><br>
+        <span id="place-address"></span>
+        </div> -->
 
 
     <div class="footer" id="footerCntr"></div>
@@ -42,20 +52,8 @@
     <!-- build:js scripts/bundle.js -->
     <script src="scripts/bundle.js"></script>
     <!-- endbuild -->
-    <script>
-      // This sample uses the Place Autocomplete widget to allow the user to search
-      // for and select a place. The sample then displays an info window containing
-      // the place ID and other information about the place that the user has
-      // selected.
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9gF0FCZIPkEKJG8EF7uyUG5ItIQ4aQkA&libraries=places" async defer></script>
 
-      // This example requires the Places library. Include the libraries=places
-      // parameter when you first load the API. For example:
-      // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
-
-
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9gF0FCZIPkEKJG8EF7uyUG5ItIQ4aQkA&libraries=places&callback=initMap"
-        async defer></script>
 
 </body>
 

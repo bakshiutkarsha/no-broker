@@ -9,7 +9,7 @@ export default {
 
 
     API_URLS: {
-        GET_ALL_HOUSES: ':BASE_URL:/property/filter/region/ChIJLfyY2E4UrjsRVq4AjI7zgRY?pageNo=:pageNo:',
+        GET_ALL_HOUSES: ':BASE_URL:/property/filter/region/:place_id:?pageNo=:pageNo:',
     },
 
 

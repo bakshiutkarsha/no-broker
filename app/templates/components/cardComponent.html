@@ -43,10 +43,16 @@
           </div>
 
           <div class="flat-cntr">
-            <img src="../images/dummy.png" />
-              <% for(var j = 0; j < data[i].photos; j++){ %>
-                  <img src="<%-data[i].photos[j].imagesMap.displayPic%>" />
-              <% } %>
+            <div class="img-cntr">
+              <img src="../images/dummy.png" />
+                <!-- <% for(var j = 0; j < data[i].photos.length; j++){ %>
+                    <img src="assets.nobroker.in/images/<%-data[i].photos[j].imagesMap.original%>" />
+                <% } %> -->
+                <div class="overlay-cntr"></div>
+                <div class="overlay">
+                      <%-data[i].photos.length %> photos
+                </div>
+            </div>
 
             <div class="flat-cntr-info">
               <div class="table-cntr">
