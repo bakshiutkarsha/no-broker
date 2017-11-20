@@ -13,11 +13,10 @@ export default {
 		this.viewModel = data;
 		this.registerDOMEvents(data);
 		Utils.initMap();
-		Storage.clear();
-
 	},
 
 	registerDOMEvents(data){
+		// Storage.clear();
 		DomEventHandler.renderMyTemplate('globalCntr', HouseTemplate);
 		this.renderFilter();
 		this.renderHouses(data);

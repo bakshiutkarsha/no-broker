@@ -1,6 +1,7 @@
 import HouseView from '../view/houseView.js';
 import QuestionModel from '../model/questionModel.js';
 import AllHouseSvc from '../service/allhouseSvc';
+import Storage from '../common/webStorage';
 
 export default {
     init: function() {
@@ -8,6 +9,7 @@ export default {
     },
 
     render: function() {
+      Storage.clear();
         AllHouseSvc.getAllHouseList().then(function(resp){
             console.log(resp);
             HouseView.render(resp);
