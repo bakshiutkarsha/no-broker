@@ -2,18 +2,33 @@ import AllHouseSvc from '../service/allhouseSvc';
 import Storage from '../common/webStorage';
 import HouseView from '../view/houseView';
 import Utils from '../common/utils';
+import CardDOMEvents from '../dom-events/cardDOMEvents';
 
 
 let typeArr = [];
 
+let _resetPageNumber = function(){
+  Storage.set('PAGE_NUMBER', 1);
+}
 
 let applyBHKFilter = function(){
-  $(this).addClass('active');
-  typeArr.push($(this).data('type'));
+  if($(this).hasClass('active')){
+    $(this).removeClass('active');
+    _.pull(typeArr, $(this).data('type'));
+    if(typeArr.length != 0){
+      var typeStr = 'type='+typeArr.toString();
+    } else {
+      typeStr = '';
+    }
+    Storage.set('TYPE_URL', typeStr);
+  } else {
+    $(this).addClass('active');
+    typeArr.push($(this).data('type'));
 
-  let typeStr = 'type='+typeArr.toString();
-  Storage.set('TYPE_URL', typeStr);
-  checkForOtherFilters();
+    let typeStr = 'type='+typeArr.toString();
+    Storage.set('TYPE_URL', typeStr);
+  }
+    checkForOtherFilters();
 }
 
 let applyFurnishFilter = function(){
@@ -52,6 +67,7 @@ let checkForOtherFilters = function(){
   if(Storage.get('RANGE_URL')){
     finalParam += '&'+Storage.get('RANGE_URL')
   }
+  _resetPageNumber();
   _changeView(finalParam);
 }
 
@@ -61,6 +77,7 @@ let _changeView = function(filterStr){
   AllHouseSvc.getAllHouseList().then(function(respData){
     $('.loading').addClass('hide');
     HouseView.renderHouses(respData);
+    CardDOMEvents.checkDataLength(respData)
   }, function(err){
     console.log(err);
   })

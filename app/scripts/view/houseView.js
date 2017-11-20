@@ -45,6 +45,9 @@ export default {
 
 	append(appendData){
 		DomEventHandler.appendMyTemplate('list-cntr', CardComponentTemplate, appendData);
+		CardDOMEvents.resetLoaded();
 	}
+
+
 
 };
